@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Oving3del2final",
+            "request": "launch",
+            "mainClass": "Oving3del2final"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - nedtelling",
+            "request": "launch",
+            "mainClass": "nedtelling"
+        }
+    ]
+}

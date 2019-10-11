@@ -1,0 +1,21 @@
+package com.madslun;
+
+import java.util.Random;
+
+public class Spiller {
+
+    Random terning = new Random();
+
+    private String navn;
+    int sumPoeng;
+
+    public Spiller(String navn) {
+        this.navn = navn;
+    }
+
+
+    public void kastTerning() {
+        int terningkast = terning.nextInt();
+    }
+
+}
