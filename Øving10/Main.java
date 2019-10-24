@@ -60,6 +60,8 @@ public class Main {
                     Arrangement newArr = new Arrangement(name, id, place, type, date);
                     System.out.println("Registrert");
                     break;
+                case(2):
+                    System.out.println("Antall arrangement registrert er: " + arrReg.)
 
             }
         }

@@ -7,5 +7,7 @@ class ArrangementRegister {
     public ArrangementRegister(ArrayList<Arrangement> Arrangementer) {
         this.Arrangementer = new ArrayList<>(Arrangementer);
     }
+
+    
     
 }
