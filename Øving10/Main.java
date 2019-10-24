@@ -24,6 +24,8 @@ public class Main {
     public static void main(String [] args) {
         Arrangementer.add(Palmesus);
         Arrangementer.add(Kaperdagene);
+        System.out.println("Velkommen til dette jævla shit programmet");
+        menu();
 
 
         
@@ -58,10 +60,10 @@ public class Main {
                     System.out.println("Dato på arrangementet, i format HHMMDDMMYYYY");
                     long date = s.nextLong();
                     Arrangement newArr = new Arrangement(name, id, place, type, date);
-                    System.out.println("Registrert");
+                    System.out.println("Registrert" + arrReg.regNewArr(newArr));
                     break;
                 case(2):
-                    System.out.println("Antall arrangement registrert er: " + arrReg.)
+                    System.out.println("Antall arrangement registrert er: " + arrReg.antRegArr());
 
             }
         }
