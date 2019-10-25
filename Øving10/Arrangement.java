@@ -19,6 +19,7 @@ class Arrangement {
         this.id = id;
         this.place = place;
         this.type = type;
+        this.date = date;
     }
 
     public String getName() {

@@ -17,13 +17,18 @@ public class Main {
     public static Scanner s = new Scanner(System.in);
 
     private static Arrangement Palmesus = new Arrangement("Palmesus", 1, "Kristiansand", "Konsert", 180003072018L); 
-    private static Arrangement Kaperdagene = new Arrangement("Kaperdage", 2, "Farsund", "Forestilling", 210014072018L);
+    private static Arrangement Kaperdagene = new Arrangement("Kaperdagene", 2, "Farsund", "Forestilling", 210014072018L);
+    private static Arrangement Sushi = new Arrangement("Sushi", 3, "Kristiansand", "Mat", 123456789101L);
     private static ArrayList<Arrangement> Arrangementer = new ArrayList<>();
+    static String name;
+    static long date1;
+    static long date2;
 
 
     public static void main(String [] args) {
         Arrangementer.add(Palmesus);
         Arrangementer.add(Kaperdagene);
+        Arrangementer.add(Sushi);
         System.out.println("Velkommen til dette jævla shit programmet");
         menu();
 
@@ -35,13 +40,15 @@ public class Main {
     public static void menu() {
         ArrangementRegister arrReg = new ArrangementRegister(Arrangementer);
         while(true) {
-            System.out.println("Du kan nå velge mellom: \n" +
+            System.out.println("\nDu kan nå velge mellom: \n" +
                                 "0. Avslutt \n" +
                                 "1. Registrere et nytt arrangement \n" +
                                 "2. Å finne alle arrangementer på et gitt sted \n" +
                                 "3. Å finne alle arrangementer på en gitt dato \n" +
                                 "4. Å finne alle arrangement mellom to datoer \n" +
-                                "5. Å lage list over alle arrangementer, sortert");
+                                "5. Å lage list over alle arrangementer, sortert\n" +
+                                "6. Å finne antall arrangementer registrert \n" +
+                                "7. Å finne arrangement med navn");
 
             int choice = s.nextInt();
             switch(choice) {
@@ -51,8 +58,9 @@ public class Main {
                 case(1):
                     System.out.println("\nNavn på det nye arrangementet:");
                     s.nextLine();
-                    String name = s.nextLine();
-                    int id = 3; //get Arrangementer.size(); id = x+1
+                    name = s.nextLine();
+                    int ant = arrReg.antRegArr();
+                    int id = ant +1;
                     System.out.println("Plassering på arrangementet:");
                     String place = s.nextLine();
                     System.out.println("Type arrangement: ");
@@ -63,7 +71,39 @@ public class Main {
                     System.out.println("Registrert" + arrReg.regNewArr(newArr));
                     break;
                 case(2):
+                    System.out.println("Skriv inn navnet på plassen");
+                    s.nextLine();
+                    name = s.nextLine();
+                    arrReg.findArrPlace(name);
+                    break;           
+                case(3):
+                    System.out.println("Skriv inn dato i format HHMMDDMMYYYY: ");
+                    date1 = s.nextLong();
+                    arrReg.findArrOneDate(date1);
+                    break;
+                case(4):
+                    System.out.println("Skriv inn første dato i formatet HHMMDDMMYYYY");
+                    date1 = s.nextLong();
+                    System.out.println("Skriv inn nesste dato i formate HHMMDDMMYYYY");
+                    date2 = s.nextLong();
+                    arrReg.findArrTwoDate(date1, date2);
+                    break;
+                case(5):
+                    System.out.println("Nei. Fucku");
+                    arrReg.listByDate();
+                    break;
+                case(6):
                     System.out.println("Antall arrangement registrert er: " + arrReg.antRegArr());
+                    break;
+                case(7):
+                    System.out.println("Skriv inn navnet på arrangementet");
+                    s.nextLine();
+                    name = s.nextLine();
+                    arrReg.findArrName(name);
+                    //System.out.println(arrReg.findArrName(name));
+                    break;
+                default:
+                    System.out.println("Du skrev noe feil. Prøv på nytt");
 
             }
         }
