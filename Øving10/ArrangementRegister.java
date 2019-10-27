@@ -16,17 +16,22 @@ class ArrangementRegister {
         return this.Arrangementer.add(s);
     }
     
-    public Arrangement findArrOneDate(long date) {
+    public ArrayList findArrOneDate(long date) {
+        ArrayList<Arrangement> list = new ArrayList<>();
+
+        int id = 0;
         for(int i = 0; i < this.Arrangementer.size(); i++) {
             if(Arrangementer.get(i).getDate() == date) {
-                toStringm(this.Arrangementer.get(i));
+                list.add(this.Arrangementer.get(i));
             }
         }
         System.out.println("Could not find");
-        return null;
+        return list;
     }
 
-    public Arrangement findArrTwoDate(long date1, long date2) {
+    public ArrayList findArrTwoDate(long date1, long date2) {
+        ArrayList<Arrangement> list = new ArrayList<>();
+
         long smallest;
         long biggest;
         for(int i=0; i < this.Arrangementer.size(); i++) {
@@ -39,54 +44,62 @@ class ArrangementRegister {
                 smallest = date1;
             }
             if(Arrangementer.get(i).getDate() > smallest && Arrangementer.get(i).getDate() < biggest) {
-                toStringm(this.Arrangementer.get(i));
+                list.add(this.Arrangementer.get(i));
 
             }
         }
-        System.out.println("Could not find it");
-        return null;
+        return list;
     }
 
-    public Arrangement findArrName(String name) {
+    public ArrayList findArrName(String name) {
+        ArrayList<Arrangement> list = new ArrayList<>();
+
         for(int i = 0; i < this.Arrangementer.size(); i++) {
             if(Arrangementer.get(i).getName().equals(name)) {
-                toStringm(this.Arrangementer.get(i));
+                list.add(this.Arrangementer.get(i));
             }
         }
-        return null;
+        return list;
     }
 
-    public Arrangement findArrPlace(String name) {
+    public ArrayList findArrPlace(String name) {
+        ArrayList<Arrangement> list = new ArrayList<>();
         for(int i = 0; i < this.Arrangementer.size(); i++) {
             if(Arrangementer.get(i).getPlace().equals(name)) {
-                toStringm(this.Arrangementer.get(i));
+                list.add(this.Arrangementer.get(i));
             }
         }
         System.out.println("Could not find the place");
-        return null;
+        return list;
     }
 
-    public Arrangement listByDate() {
-        for(int i = 0; i < this.Arrangementer.size(); i++) {
-            long smallest = this.Arrangementer.get(0).getDate();
+    /*public Arrangement listByDate() {
+        ArrayList<Arrangement> sort = new ArrayList<>(Arrangementer);
+        for(int i = 0; i < 3; i++) {
+            System.out.println(sort.size());
+            long smallest = sort.get(0).getDate();
             int id = 0;
-                for(int j = 0; j < this.Arrangementer.size(); j++) {
-                    if(Arrangementer.get(j).getDate() < smallest) {
-                        smallest = Arrangementer.get(j).getDate();
+                for(int j = 0; j < sort.size(); j++) {
+                    if(sort.get(j).getDate() < smallest) {
+                        smallest = sort.get(j).getDate();
                         id = j;
+                        System.out.println("ID :" + id);
                     }
                 }
-                toStringm(Arrangementer.get(id));
-                this.Arrangementer.remove(id);
+            return (Arrangementer.get(id));
+            sort.remove(id);
             }
         return null;
-    }
+    }*/
 
    
 
-    public void toStringm(Arrangement s) {
-        System.out.println("\nNavn: " + s.getName() + "\nID: " + s.getId() + 
-        "\nPlass: " +  s.getPlace() + "\nType: " +  s.getType() + "\nDato: " + s.getDate());
+    public String toString() {
+        String text = "";
+        for(Arrangement a : Arrangementer) {
+            text+=a.toString()+"\n";
+        }
+        return text;
     }
     
 

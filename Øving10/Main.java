@@ -13,6 +13,9 @@ public class Main {
 */
 
 
+//Må også opprette flere sort så jeg kan sortere på navn osv
+
+
 
     public static Scanner s = new Scanner(System.in);
 
@@ -32,7 +35,7 @@ public class Main {
         System.out.println("Velkommen til dette jævla shit programmet");
         menu();
 
-
+       
         
     }
 
@@ -74,7 +77,7 @@ public class Main {
                     System.out.println("Skriv inn navnet på plassen");
                     s.nextLine();
                     name = s.nextLine();
-                    arrReg.findArrPlace(name);
+                    System.out.println(arrReg.findArrPlace(name));
                     break;           
                 case(3):
                     System.out.println("Skriv inn dato i format HHMMDDMMYYYY: ");
@@ -86,11 +89,39 @@ public class Main {
                     date1 = s.nextLong();
                     System.out.println("Skriv inn nesste dato i formate HHMMDDMMYYYY");
                     date2 = s.nextLong();
-                    arrReg.findArrTwoDate(date1, date2);
+                    //Legg til sort by date
+                    System.out.println(arrReg.findArrTwoDate(date1, date2).toString());
                     break;
                 case(5):
-                    System.out.println("Nei. Fucku");
-                    arrReg.listByDate();
+                    //arrReg.listByDate();
+                    System.out.println("Hva vil du sortere mellom? \n" +
+                    "1. Dato \n" +
+                    "2. Navn \n" +
+                    "3. Type \n" +
+                    "4. Plass");
+                    choice = s.nextInt();
+                    switch(choice) {
+                        case(1):
+                            Collections.sort(Arrangementer, new sortByDate());
+                            System.out.println(Arrangementer.toString());
+                            break;
+                        case(2):
+                            Collections.sort(Arrangementer, new sortByName());
+                            System.out.println(Arrangementer.toString());
+                            break;
+                        case(3):
+                            Collections.sort(Arrangementer, new sortByType());
+                            System.out.println(Arrangementer.toString());
+                            break;
+                        case(4):
+                            Collections.sort(Arrangementer, new sortByPlace());
+                            System.out.println(Arrangementer.toString());
+                            break;
+                        default:
+                            System.out.println("Du skrev noe feil...");
+                            continue;
+                    }
+
                     break;
                 case(6):
                     System.out.println("Antall arrangement registrert er: " + arrReg.antRegArr());

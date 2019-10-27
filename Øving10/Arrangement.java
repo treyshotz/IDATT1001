@@ -41,5 +41,34 @@ class Arrangement {
     public long getDate() {
         return this.date;
     }
+
+    public String toString() {
+        return ("\nNavn: " + getName() + "\nID: " + getId() + 
+        "\nPlass: " +  getPlace() + "\nType: " +  getType() + "\nDato: " + getDate());
+    }
     
+}
+
+class sortByPlace implements Comparator<Arrangement> {
+    public int compare(Arrangement a, Arrangement b) { 
+        return(a.getPlace().compareTo((b.getPlace())));
+    }
+}
+
+class sortByDate implements Comparator<Arrangement> {
+    public int compare(Arrangement a, Arrangement b) {
+        return Long.compare(a.getDate(), (b.getDate()));
+    }
+} 
+
+class sortByName implements Comparator<Arrangement> {
+    public int compare(Arrangement a, Arrangement b) {
+        return(a.getName().compareTo(b.getName()));
+    }
+}
+
+class sortByType implements Comparator<Arrangement> {
+    public int compare(Arrangement a, Arrangement b) {
+        return(a.getType().compareTo(b.getType()));
+    }
 }
