@@ -22,23 +22,69 @@ public class MenuRegister {
         return new Dish(name, type, price, recipe);
     }
 
-    public Menu regMenu(ArrayList<Dish> dishes) {
+    public Menu regMenu(String name, ArrayList<Dish> dishes) {
         //Loop through to check 
-        return new Menu(dishes);
+        Iterator<Menu> mIterator = this.menues.iterator();
+        while(mIterator.hasNext()) {
+            Menu m = mIterator.next();
+            if(m.getName().equalsIgnoreCase(name)) {
+                System.out.println("Dette navnet er tatt, velg et annet");
+                return null;
+            }
+        }
+        return new Menu(name, dishes);
     }
 
-    /*public Dish findDish(String name) {
+    public Dish findDish(String name) {
         Iterator<Menu> menuiterator = this.menues.iterator();
 
         while(menuiterator.hasNext()) {
             Menu menu = menuiterator.next();
 
-            for(Dish dish : menu.geDishes()) {
-
+            for(Dish dish : menu.getDishes()) {
+                if(dish.getName().equalsIgnoreCase(name)) {
+                    return dish;
+                }
             }
         }
+        return null;
+    }
 
-    }*/
+    public ArrayList findType(String type) {
+        Iterator<Menu> mIterator = this.menues.iterator();
+        ArrayList<Dish> foundList = new ArrayList<>();
+
+        while(mIterator.hasNext()) {
+            Menu menu = mIterator.next();
+            for(Dish d : menu.getDishes()) {
+                if(d.getType().equalsIgnoreCase(type)) {
+                    foundList.add(d);
+                }
+            }
+        }
+        if(foundList.isEmpty()) {
+            System.out.println("Kunne ikke finne noen retter...");
+            return null;
+        }
+        return foundList;
+    }
+
+    public ArrayList findMenu(double minPrice, double maxPrice) {
+        Iterator<Menu> mIterator = this.menues.iterator();
+        ArrayList<Menu> foundList = new ArrayList<>();
+
+        while(mIterator.hasNext()) {
+            Menu menu = mIterator.next();
+            if(menu.getPrice() > minPrice && menu.getPrice() < maxPrice) {
+                foundList.add(menu);
+            }
+        }
+        if(foundList.size() == 0) {
+            System.out.println("Kunne ikke finne en meny som er innenfor prisklassen...");
+            return null;
+        }
+        return foundList;
+    }
 
     public int numMenu(){
         return this.menues.size();
@@ -53,5 +99,11 @@ public class MenuRegister {
     }
 
 
-    //toString metode
+    public String toString(){
+        String text = "";
+        for(Menu a : menues) {
+            text += a.toString()+"\n";
+        }
+        return text;
+    }
 }

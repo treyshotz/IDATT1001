@@ -28,4 +28,8 @@ public class Dish {
     public String getRecipe() {
         return recipe;
     }
+
+    public String toString() {
+        return ("\nNavn: " + getName() + "\nType: " + getType() + "\nPris: " + getPrice() + "\nOppskrift: " + getRecipe());
+  }
 }
