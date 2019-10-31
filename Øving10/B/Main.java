@@ -33,7 +33,6 @@ Klassen MenyRegister skal tilby følgende operasjoner:
     //private static Menu mixed = new Menu(new ArrayList<>(Arrays.asList(garlicBread, steak, gelato)));
 
     //Registing alle the menues
-    private static MenuRegister m1 = new MenuRegister(new ArrayList<>(Arrays.asList(italian,american/*, mixed*/)));
 
 
     private static String name;
@@ -49,7 +48,7 @@ Klassen MenyRegister skal tilby følgende operasjoner:
     }
 
     public static void menu() {
-        MenuRegister menuReg = m1;
+        MenuRegister menuReg = new MenuRegister(new ArrayList<>(Arrays.asList(italian,american/*, mixed*/)));
 
         while(true) {
             System.out.println( "0. Avslutt\n" +
@@ -87,7 +86,11 @@ Klassen MenyRegister skal tilby følgende operasjoner:
                     String type = s.nextLine();
                     System.out.println("Retter med typen '" + type + "': " + menuReg.findType(type).toString());
                     break;
-                case 4: 
+                case 4:
+                    ArrayList<String> dishNames = new ArrayList<>();
+                    ArrayList<Dish> dishes = new ArrayList<>();
+
+                
                     System.out.println("Registrere en ny meny");
                     System.out.println("Navn på menyen?");
                     s.nextLine();
@@ -95,13 +98,19 @@ Klassen MenyRegister skal tilby følgende operasjoner:
                     while(true) {
                         System.out.println("Navn på rett du vil legge til i menyen?");
                         String dishName = s.nextLine();
+                        dishNames.add(dishName);
                         System.out.println("Vil du legge til en til rett?\n 1. Ja \n 2. Nei");
                         choice = s.nextInt();
                         if(choice == 2) {
                             break;
-                        }
+                            }
                     }
-                    //Register the new menu
+
+                    for(String i : dishNames) {
+                        Dish dishAdd = menuReg.findDish(i);
+                        dishes.add(dishAdd);
+                    }
+                    System.out.println("Lagrer en ny meny" + menuReg.regMenu(name, dishes));
                     break;
                 case 5: 
                     System.out.println("Finne alle menyer innenfor en gitt pris");
