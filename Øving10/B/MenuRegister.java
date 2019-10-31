@@ -22,7 +22,7 @@ public class MenuRegister {
         return new Dish(name, type, price, recipe);
     }
 
-    public Menu regMenu(String name, ArrayList<Dish> dishes) {
+    /*public Menu regMenu(String name, ArrayList<Dish> dishes) {
         //Loop through to check 
         Iterator<Menu> mIterator = this.menues.iterator();
         while(mIterator.hasNext()) {
@@ -32,8 +32,8 @@ public class MenuRegister {
                 return null;
             }
         }
-        return new Menu(name, dishes);
-    }
+        return new menu(name, dishes);
+    }*/
 
     public Dish findDish(String name) {
         Iterator<Menu> menuiterator = this.menues.iterator();
