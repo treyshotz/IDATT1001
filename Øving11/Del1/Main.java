@@ -58,7 +58,6 @@ Regne ut og vise gjennomsnitts areal av alle eiendommene i registeret
                     s.nextLine();
                     System.out.println("Name?");
                     String name = "";
-                    ///Sjekke om input er tom?
                     name = s.nextLine();
                     System.out.println("Area?");
                     double area = s.nextDouble();
