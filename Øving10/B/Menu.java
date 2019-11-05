@@ -2,10 +2,9 @@ import java.util.*;
 
 public class Menu {
     private String name;
-    ArrayList<Dish> dishes;
+    private ArrayList<Dish> dishes;
     private double totalPrice;
 
-    ArrayList<Dish> AllDishes = new ArrayList<>();
  
 
     public Menu(String name, ArrayList<Dish> dishes) {

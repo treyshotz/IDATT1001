@@ -3,6 +3,7 @@ import java.util.*;
 public class MenuRegister {
 
     private ArrayList<Menu> menues;
+    private ArrayList<Dish> allDishes;
 
     public MenuRegister(ArrayList<Menu> menues) {
         this.menues = menues;
@@ -19,7 +20,8 @@ public class MenuRegister {
                 }
             }
         }
-        return new Dish(name, type, price, recipe);
+        Dish nDish = new Dish(name, type, price, recipe);
+        return nDish;
     }
 
     public Menu regMenu(String name, ArrayList<Dish> dishes) {

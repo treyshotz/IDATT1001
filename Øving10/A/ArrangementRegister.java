@@ -25,7 +25,6 @@ class ArrangementRegister {
                 list.add(this.Arrangementer.get(i));
             }
         }
-        System.out.println("Could not find");
         return list;
     }
 

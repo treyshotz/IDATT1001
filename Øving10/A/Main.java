@@ -82,7 +82,7 @@ public class Main {
                 case(3):
                     System.out.println("Skriv inn dato i format HHMMDDMMYYYY: ");
                     date1 = s.nextLong();
-                    arrReg.findArrOneDate(date1);
+                    System.out.println(arrReg.findArrOneDate(date1).toString());
                     break;
                 case(4):
                     System.out.println("Skriv inn første dato i formatet HHMMDDMMYYYY");
