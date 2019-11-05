@@ -71,5 +71,9 @@ public class RealEstate {
         return secNum;
     }
 
+    public String toString() {
+        return("\nNr: " + this.getMunNum() + "-" + this.getLotNum() + "/" + this.getSecNum() + "\nKommune navn: " + this.getMunName() +  
+        "\nBruksnavn: " + this.getName() + "\nAreal: " + this.getArea() + "\nEier: " + this.getOwnName() + "\n");
+    }
 
 }
