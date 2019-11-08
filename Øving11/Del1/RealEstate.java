@@ -3,6 +3,7 @@ import java.util.*;
 
 public class RealEstate {
 
+    //Initializing the variables used in the code
     public int munNum;
     public String munName;
     public int lotNum;
@@ -11,6 +12,7 @@ public class RealEstate {
     public double area;
     public String ownName;
     
+    //Creating the cunstructor for RealEstate
     public RealEstate(int munNum, String munName, int lotNum, int secNum, String name, double area, String ownName) {
         this.munNum = munNum;
         this.munName = munName;
@@ -71,6 +73,7 @@ public class RealEstate {
         return secNum;
     }
 
+    //Writes out RealEstate to String
     public String toString() {
         return("\nNr: " + this.getMunNum() + "-" + this.getLotNum() + "/" + this.getSecNum() + "\nKommune navn: " + this.getMunName() +  
         "\nBruksnavn: " + this.getName() + "\nAreal: " + this.getArea() + "\nEier: " + this.getOwnName() + "\n");

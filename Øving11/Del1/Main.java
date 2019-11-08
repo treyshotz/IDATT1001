@@ -36,7 +36,10 @@ Regne ut og vise gjennomsnitts areal av alle eiendommene i registeret
             "1. Registrere en ny eiendom\n" +
             "2. Skrive ut alle eiendommer som er registrert\n" + 
             "3. Søke etter eiendom basert på kommunoenr, gnr og bnr\n" +
-            "4. Regne ut og vise gjennomsnitts areal av alle eiendommene i registeret");
+            "4. Regne ut og vise gjennomsnitts areal av alle eiendommene i registeret\n" + 
+            "5. Fjerne en eiendom\n" + 
+            "6. Skrive ut antall eiendommer"
+            );
             
             int choice = s.nextInt();
 
@@ -83,6 +86,19 @@ Regne ut og vise gjennomsnitts areal av alle eiendommene i registeret
                 case 4:
                     System.out.println("Regne ut og vise gjennomsnitts areal av alle eiendommene i registeret");
                     System.out.println("Arealet er " + realEstates.avgArea());
+                    break;
+                case 5:
+                    System.out.println("Fjerne en eiendom");
+                    System.out.println("Skriv inn Kommune nr?");
+                    munNum = s.nextInt();
+                    System.out.println("Gnr?");
+                    lotNum = s.nextInt();
+                    System.out.println("Bnr?");
+                    secNum = s.nextInt();
+                    System.out.println(realEstates.delRealEstate(munNum, lotNum, secNum));
+                    break;
+                case 6:
+                    System.out.println("\nAntall eiendommer er: " + realEstates.numReal() + "\n");
                     break;
                 default: 
                     System.out.println("Du skrev inn noe feil...");
