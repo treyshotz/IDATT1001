@@ -1,14 +1,15 @@
 import java.util.*;
 
+/**
+ * @author Mads Lundegaard
+ * Class Main
+ */
+
+
 public class Main {
 
 
-/*
-Registrere/legge inn eiendom
-Skrive ut alle eiendommer som er registrert
-Søke etter eiendom basert på kommunenr, gnr og bnr (alle 3 samtidig)
-Regne ut og vise gjennomsnitts areal av alle eiendommene i registeret
-*/
+
 
     public static Scanner s = new Scanner(System.in);
 

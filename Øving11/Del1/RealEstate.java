@@ -1,5 +1,9 @@
 import java.util.*;
 
+/**
+ * Class RealEstate
+ * @author Mads Lundegaard
+ */
 
 public class RealEstate {
 
@@ -12,7 +16,18 @@ public class RealEstate {
     private double area;
     private String ownName;
     
-    //Creating the cunstructor for RealEstate
+
+    /**
+     * Constructor creating an object of type RealEstate
+     * @param munNum
+     * @param munName
+     * @param lotNum
+     * @param secNum
+     * @param name
+     * @param area
+     * @param ownName
+     */
+
     public RealEstate(int munNum, String munName, int lotNum, int secNum, String name, double area, String ownName) {
         this.munNum = munNum; //Kommune nr
         this.munName = munName; //Kommune navn
@@ -21,8 +36,8 @@ public class RealEstate {
         this.name = name; //Bruks navn
         this.area = area; //Areal
         this.ownName = ownName; //Eier navn
-
     }
+
 
     /**
      * @return the area
@@ -73,7 +88,31 @@ public class RealEstate {
         return secNum;
     }
 
-    //Writes out RealEstate to String
+    /**
+     * @param munName the munName to set
+     */
+    public void setMunName(String munName) {
+        this.munName = munName;
+    }
+
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * @param ownName the ownName to set
+     */
+    public void setOwnName(String ownName) {
+        this.ownName = ownName;
+    }
+
+    
+    /**
+     * @return String of every getmethod
+     */
     public String toString() {
         return("\nNr: " + this.getMunNum() + "-" + this.getLotNum() + "/" + this.getSecNum() + "\nKommune navn: " + this.getMunName() +  
         "\nBruksnavn: " + this.getName() + "\nAreal: " + this.getArea() + "\nEier: " + this.getOwnName() + "\n");

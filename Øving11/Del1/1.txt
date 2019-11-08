@@ -1,0 +1,1 @@
+Registrerings klassen må sammarbeide med RealEstate klassen for å opprette nye objekter.
