@@ -39,7 +39,8 @@ public class Main {
             "3. Søke etter eiendom basert på kommunoenr, gnr og bnr\n" +
             "4. Regne ut og vise gjennomsnitts areal av alle eiendommene i registeret\n" + 
             "5. Fjerne en eiendom\n" + 
-            "6. Skrive ut antall eiendommer"
+            "6. Skrive ut antall eiendommer\n" + 
+            "7. Skriv ut alle eiendommer med et gårdsnummer"
             );
             
             int choice = s.nextInt();
@@ -100,6 +101,12 @@ public class Main {
                     break;
                 case 6:
                     System.out.println("\nAntall eiendommer er: " + realEstates.numReal() + "\n");
+                    break;
+                case 7:
+                    System.out.println("Finn eiendommer med et gårdsnummer");
+                    System.out.println("Hvilket gårdsnummer vil du bruke?");
+                    lotNum = s.nextInt();
+                    System.out.println("Fant følgende eiendommer: \n" + realEstates.findAllLotNum(lotNum).toString());
                     break;
                 default: 
                     System.out.println("Du skrev inn noe feil...");

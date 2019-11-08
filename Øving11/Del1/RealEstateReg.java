@@ -98,6 +98,23 @@ public class RealEstateReg {
 
     }
 
+    public ArrayList findAllLotNum(int lotNum) {
+        ArrayList<RealEstate> rEstates = new ArrayList<>();
+        Iterator<RealEstate> iterator = realEstates.iterator();
+
+        while(iterator.hasNext()) {
+            RealEstate n = iterator.next();
+            if(n.getLotNum() == lotNum) {
+                rEstates.add(n);
+            }
+        }
+        if(rEstates.isEmpty()) {
+            return null;
+        }
+
+        return rEstates;
+    }
+
 
     /**
      * Loops through list and adds the area to a totalArea variable

@@ -1,0 +1,2 @@
+Det er ikke nødvendig å legge til en set metode på alle variabelene da enkelte ikke skiftes
+Jeg lagde set metoder på navn eiernavn og bruksnavn da disse er ting som man kan regne med må endres på

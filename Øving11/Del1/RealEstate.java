@@ -88,12 +88,6 @@ public class RealEstate {
         return secNum;
     }
 
-    /**
-     * @param munName the munName to set
-     */
-    public void setMunName(String munName) {
-        this.munName = munName;
-    }
 
     /**
      * @param name the name to set
@@ -109,7 +103,7 @@ public class RealEstate {
         this.ownName = ownName;
     }
 
-    
+
     /**
      * @return String of every getmethod
      */
