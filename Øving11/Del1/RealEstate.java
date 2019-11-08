@@ -4,23 +4,23 @@ import java.util.*;
 public class RealEstate {
 
     //Initializing the variables used in the code
-    public int munNum;
-    public String munName;
-    public int lotNum;
-    public int secNum;
-    public String name;
-    public double area;
-    public String ownName;
+    private int munNum;
+    private String munName;
+    private int lotNum;
+    private int secNum;
+    private String name;
+    private double area;
+    private String ownName;
     
     //Creating the cunstructor for RealEstate
     public RealEstate(int munNum, String munName, int lotNum, int secNum, String name, double area, String ownName) {
-        this.munNum = munNum;
-        this.munName = munName;
-        this.lotNum = lotNum;
-        this.secNum = secNum;
-        this.name = name;
-        this.area = area;
-        this.ownName = ownName;
+        this.munNum = munNum; //Kommune nr
+        this.munName = munName; //Kommune navn
+        this.lotNum = lotNum; //Gards nr
+        this.secNum = secNum; //Bruks nr
+        this.name = name; //Bruks navn
+        this.area = area; //Areal
+        this.ownName = ownName; //Eier navn
 
     }
 

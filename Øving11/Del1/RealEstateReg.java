@@ -4,7 +4,7 @@ public class RealEstateReg {
 
     //Initializing the ArrayList used to hold all RealEstates
     //Chose to use ArrayList cause im more Comfortable using is, and it has some useful methods
-    ArrayList<RealEstate> realEstates = new ArrayList<>();
+    private ArrayList<RealEstate> realEstates = new ArrayList<>();
 
     public RealEstateReg(ArrayList<RealEstate> realEstates) {
         this.realEstates = realEstates;
