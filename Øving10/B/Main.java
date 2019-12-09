@@ -67,7 +67,7 @@ Klassen MenyRegister skal tilby følgende operasjoner:
                 case 1:
                     System.out.println("\nAntall menyer: " + menuReg.numMenu());
                     break;
-                case 2:
+                case 2: 
                     System.out.println("Navn på den nye retten: \n");
                     s.nextLine();
                     name = s.nextLine();
