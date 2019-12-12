@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41e3125f-43fa-4bb4-b3d3-fb55a507c156" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Eksamen2017V/src/Bokstaveringsalfabet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Eksamen2018H/src/Kleint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Eksamen2018H/src/Soppart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Eksamen2018H/src/Soppregister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Øving10/B/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Øving10/B/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2016/src/Bil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2016/src/Hjul.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2016/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2016/src/Motor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2016/src/UtleieFirma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Eksamen2019/Soppart.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Eksamen2019/Soppart.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575886745765</updated>
       <workItem from="1575886747257" duration="50000" />
+      <workItem from="1575978436412" duration="17000" />
     </task>
     <servers />
   </component>
@@ -58,7 +60,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
