@@ -21,11 +21,11 @@ import java.util.Random;
             System.out.println("Heltall: " + helTall + "    Desimaltall: " + desimalTall); //Skriver ut heltall og desimaltall
 
             if (helTall > helTallOvre || helTall < helTallNedre){ //Sjekker om det er større eller mindre enn grense
-                System.out.println("Feil homspung");
+                System.out.println("Feil");
                 break; //Bryter ut av loop og avslutter program
             }
             else if (desimalTall > desimalTallOvre || desimalTall < helTallNedre) { //Sjekker om det er større eller mindre enn grense
-                System.out.println("Feil hore");
+                System.out.println("Feil");
                 break; //Bryter ut av loop og avslutter program
             }
 
